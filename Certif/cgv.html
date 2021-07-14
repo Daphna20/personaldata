@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGV</title>
+
+    <link rel="stylesheet" href="stylecgv.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="texte">
+            <h1>Avant d'accéder à cette page,
+                <br>
+                nous vous invitons à répondre aux questions suivantes
+            </h1>
+            <p>Merci de confirmer que vous êtes bien majeur(e)</p>
+
+        </div>
+
+        <div class="radio">
+            <div class="majeur">
+                <input type="radio" id="majeur" name="age" value="majeur" checked>
+                <label for="majeur">J'ai plus de 18 ans</label>
+            </div>
+            <div class="miner">
+                <input type="radio" id="mineur" name="age" value="mineur">
+                <label for="mineur">J'ai moins de 18 ans</label>
+            </div>
+        </div>
+        <br>
+        <p>Pendant que vous y êtes, merci de remplir également ce rapide formulaire :</p>
+
+        <form class="formdesktop" id="contact" action="" method="post">
+
+            <input placeholder="Votre date de naissance (JJ/MM/AAAA)" type="text">
+            <input placeholder="Votre lieu de naissance" type="text">
+            <input placeholder="Votre nom de naissance" type="text">
+            <input placeholder="Votre nom d'époux (se) si différent" type="text">
+
+
+        </form>
+
+        <form class="formresponsive" id="contact" action="" method="post">
+
+            <input placeholder="Date de naissance" type="text">
+            <input placeholder="Lieu de naissance" type="text">
+            <input placeholder="Nom de naissance" type="text">
+            <input placeholder="Nom d'époux (se)" type="text">
+
+
+        </form>
+
+        <br>
+        <a href="index.html" target="_blank" title="accueil">Retour à l'accueil</a>
+
+    </div>
+
+
+</body>
+
+</html>

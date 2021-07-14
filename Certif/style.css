@@ -1,0 +1,588 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+    /* cursor: pointer; */
+}
+
+
+
+                                        /* HEADER */
+
+.hero{
+    position:relative;
+
+}
+
+.heroreponsive{
+    display: none;
+
+}
+
+video{
+    width: 100%;
+    position: relative;
+}
+
+.texte{
+    position: absolute;
+    color: #1F7A8C;
+    /* z-index: 0; */
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+                                /* MENU BURGER */
+
+.mobile{
+    display: none;
+}
+
+
+
+
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 3px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+    color: #1F7A8C;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #022B34;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+                                    /* MENU BURGER*/
+
+.desktop nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    gap: 15px;
+    margin: 15px;
+}
+
+.desktop nav ul a{
+    text-decoration: none;
+    color: #1F7A8C;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #1F7A8C; 
+    margin: 15px;
+    padding-top: 20%;
+    gap : 40px
+}
+
+
+header .texte aside h1{
+    font-family: 'Zilla Slab', serif;
+    font-size: 25px;
+    font-weight: bold;
+ 
+}
+
+header .texte aside p {
+    font-size: large;
+}
+
+
+                                        /* HEADER */
+
+                                        /* MAIN */
+
+
+
+
+.nouveautitre{
+    display: none ;
+    color: #022B3A; 
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.bg{
+background-color: #E1E5F2;
+}
+
+section{
+        line-height: 1.4;
+}
+
+
+section h2{
+    font-family: 'Zilla Slab', serif;
+    color: #1F7A8C;
+}
+
+.titre{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.box{
+  
+    background-color: #FFFF;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    text-align: justify;
+}
+
+.boxmobile{
+    display: none;
+    
+}
+
+#textarea1:target {
+    display: block;
+}
+
+#textarea1 + ul.controls {
+    list-style-type: none;
+}
+
+#textarea1 + ul.controls .hide,
+#textarea1:target + ul.controls .show {
+    display: none;
+}
+
+#textarea1:target + ul.controls .hide,
+#textarea1 + ul.controls .show {
+    display: inline-block;
+}
+
+#textarea2:target {
+    display: block;
+}
+
+#textarea2 + ul.controls {
+    list-style-type: none;
+}
+
+#textarea2 + ul.controls .hide,
+#textarea2:target + ul.controls .show {
+    display: none;
+}
+
+#textarea2:target + ul.controls .hide,
+#textarea2 + ul.controls .show {
+    display: inline-block;
+}
+
+
+#textarea3:target {
+    display: block;
+}
+
+#textarea3 + ul.controls {
+    list-style-type: none;
+}
+
+#textarea3 + ul.controls .hide,
+#textarea3:target + ul.controls .show {
+    display: none;
+}
+
+#textarea3:target + ul.controls .hide,
+#textarea3 + ul.controls .show {
+    display: inline-block;
+}
+
+
+#textarea4:target {
+    display: block;
+}
+
+#textarea4 + ul.controls {
+    list-style-type: none;
+}
+
+#textarea4 + ul.controls .hide,
+#textarea4:target + ul.controls .show {
+    display: none;
+}
+
+#textarea4:target + ul.controls .hide,
+#textarea4 + ul.controls .show {
+    display: inline-block;
+}
+
+
+.horsimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    gap: 15px;
+  
+}
+
+.box .horsimg .titre{
+    gap: 20px;
+    }
+
+.photo{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.photo img{
+    width: 70%;
+    height: 70%;
+}
+
+
+.reverse{
+   display: flex;
+   flex-direction: row-reverse;
+}
+
+
+
+section img{
+    height: 70px;
+    width: 70px;
+}
+ul li {
+    margin-left: 20px;
+}
+
+
+                                         /* MAIN */
+
+
+                                         /* FOOTER */
+footer{
+    background: url(images/footer.png) no-repeat center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.8;
+}
+
+footer .home{
+    display:none;
+    text-align: center;
+}
+
+footer .haut{
+    align-self: flex-start;
+    margin-top: 40px;
+}
+
+footer .textegauche{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .textedroit{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+footer .centre{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer .centre .textecentre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .centre .réseauxsociaux{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #1F7A8C;
+    transition: color .5s;
+}
+
+a:hover {
+    font-weight: bolder;
+  }
+                                           /* FOOTER */
+
+
+@media (max-width: 1100px) {
+
+    .hero{
+        display: none;
+    
+    }
+    
+    .heroreponsive{
+        display: block;
+        position:relative;
+    
+    }
+
+    header {
+        font-size: 14px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    aside{
+        display: none;
+    }
+   
+    .nouveautitre{
+        display: block;
+    }
+
+    .box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .horsimg, .photo{
+        width: 100%;
+    }
+   
+    .photo img{
+        width: 50%;
+        height: 70%
+}
+   
+
+    footer .home{
+    display: block;
+}
+
+} 
+
+
+@media (max-width: 900px){
+
+    footer{
+        justify-content: center;
+        background: none;
+
+}
+
+@media (max-width:650px){
+
+    .titre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }   
+
+   
+    .box .horsimg{
+    gap: 30px;
+    }
+
+    section h2{
+    font-size: 18px;
+    }
+
+    .photo img{
+    width: 50%;
+    height: 40%;
+    }
+
+    footer{
+    margin: 15px;
+    font-size: 12px;
+    }
+}
+}
+
+
+@media (max-width:550px){
+ .box{
+    text-align: left;
+    }
+
+
+
+.box .horsimg p{
+    display:none;
+}
+
+.box .horsimg .uldesktop{
+    display: none;
+}
+.boxmobile{
+    display: block;
+
+}
+.boxmobile a {
+    text-decoration: none;
+    color: black;
+    transition: color .5s;
+}
+
+.boxmobile a:hover {
+    font-weight: bolder;
+  }
+
+}
